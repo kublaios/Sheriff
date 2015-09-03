@@ -25,7 +25,9 @@
     [self.view addSubview:self.logoImageView];
 
     self.badgeView = [GIBadgeView new];
-//    self.badgeView.font = [UIFont fontWithName:@"OpenSans-Semibold" size:18];
+    self.badgeView.kBadgeViewPadding = 4.0;
+    self.badgeView.kBadgeViewMinimumSize = 10.0;
+    self.badgeView.font = [UIFont fontWithName:@"OpenSans-Semibold" size:10];
 //    self.badgeView.backgroundColor = [UIColor colorWithRed:49/255.0 green:69/255.0 blue:122/255.0 alpha:1.0];
     [self.logoImageView addSubview:self.badgeView];
 }

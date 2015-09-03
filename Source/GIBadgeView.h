@@ -30,6 +30,18 @@
 
 
 /**
+ * Value for setting the minimum size of the badge view.
+ */
+@property CGFloat kBadgeViewMinimumSize;
+
+
+/**
+ * Value for padding between text and the edges.
+ */
+@property CGFloat kBadgeViewPadding;
+
+
+/**
  * Increment the badge value, which will result in the badge being displayed if the current value is zero.
  */
 - (void)increment;

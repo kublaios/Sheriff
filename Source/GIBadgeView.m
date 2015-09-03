@@ -8,8 +8,6 @@
 
 #import "GIBadgeView.h"
 
-static CGFloat const kBadgeViewMinimumSize = 25.0;
-static CGFloat const kBadgeViewPadding = 12.0;
 static CGFloat const kBadgeViewDefaultFontSize = 18.0;
 
 static NSTimeInterval const kBadgeAnimationDuration = 0.2;
@@ -43,7 +41,8 @@ static NSTimeInterval const kBadgeAnimationDuration = 0.2;
     self.formatter = [NSNumberFormatter new];
     self.formatter.groupingSeparator = @",";
     self.formatter.usesGroupingSeparator = YES;
-
+    self.kBadgeViewMinimumSize = 25.0;
+    self.kBadgeViewPadding = 12.0;
     [self setupDefaultAppearance];
 }
 
@@ -102,8 +101,8 @@ static NSTimeInterval const kBadgeAnimationDuration = 0.2;
 
     // Calculate the height we will be based on the label.
     //
-    CGFloat height = MAX(kBadgeViewMinimumSize, badgeLabelHeight + kBadgeViewPadding);
-    CGFloat width = MAX(height, badgeLabelWidth + kBadgeViewPadding);
+    CGFloat height = MAX(self.kBadgeViewMinimumSize, badgeLabelHeight + self.kBadgeViewPadding);
+    CGFloat width = MAX(height, badgeLabelWidth + self.kBadgeViewPadding);
 
     // Set our frame and corner radius based on those calculations.
     //
